@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>  
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title></title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.15/dijit/themes/claro/claro.css"> 
+    <link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
+    <link rel="stylesheet" href="css/ArcgisGallery.css">
+    <script src="https://js.arcgis.com/3.15/"></script>
+    <script type="text/javascript" src="js/arcgisgallery.js"></script>
+  </head>
+  <body class="claro">
+    <div class"conntainer"data-dojo-type="dijit/layout/BorderContainer" 
+       data-dojo-props="design:'headline', gutters:false" 
+       >
+    <div id="map" 
+         data-dojo-type="dijit/layout/ContentPane" 
+         data-dojo-props="region:'center'">
+      <div id="Gallery">
+        <div data-dojo-type="dijit/TitlePane"
+             data-dojo-props="title:'Switch Basemap', closable:false, open:false" >
+          <div data-dojo-type="dijit/layout/ContentPane" class="Gal-desp">
+            <div id="basemapGallery"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ 
+
+  </body>
+
+
+</html>
