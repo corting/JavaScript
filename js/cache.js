@@ -6,14 +6,14 @@ require(['esri/map',
         'esri/layers/ArcGISDynamicMapServiceLayer',
         'esri/symbols/LineSymbol',
         'esri/layers/FeatureLayer',
-        "esri/InfoTemplate",
+        'esri/InfoTemplate',
         'esri/dijit/BasemapGallery',
-        "esri/dijit/Basemap",
-        "esri/arcgis/utils",
-        "dojo/parser",
-        "dijit/layout/BorderContainer", 
-        "dijit/layout/ContentPane", 
-        "dijit/TitlePane",
+        'esri/dijit/Basemap',
+        'esri/arcgis/utils',
+        'dojo/parser',
+        'dijit/layout/BorderContainer', 
+        'dijit/layout/ContentPane', 
+        'dijit/TitlePane',
           'dojo/domReady!'], 
 
      function(Map,
@@ -51,19 +51,19 @@ require(['esri/map',
       var Urlfeature2 = 'http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/PublicSafety/PublicSafetyFeedSample/MapServer/2';
       
 
-      var mapafeautre = new FeatureLayer(Urlfeature,{id:"feature",
+      var mapafeautre = new FeatureLayer(Urlfeature,{id:'feature',
         opacity: 0.5});
       map.addLayer(mapafeautre,1);
-      var mapafeautre1 = new FeatureLayer(Urlfeature1,{id:"feature1",
+      var mapafeautre1 = new FeatureLayer(Urlfeature1,{id:'feature1',
         opacity: 1,
       });
       map.addLayer(mapafeautre1,0);
       var template = new InfoTemplate();
-      template.setTitle("<b>Atributos</b>");
-      template.setContent("dice: ${INC_DESC}");
+      template.setTitle('<b>Atributos</b>');
+      template.setContent('dice: ${INC_DESC}');
       
 
-      var mapafeautre2 = new FeatureLayer(Urlfeature2,{id:"feature2",
+      var mapafeautre2 = new FeatureLayer(Urlfeature2,{id:'feature2',
         opacity: 1,
         infoTemplate:template
       });
