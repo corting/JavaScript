@@ -1,19 +1,19 @@
 'use strict';
 var map;
 require(['esri/map',
-  "esri/graphic",
-  "esri/geometry/Point",
-  "esri/Color",
-  "esri/layers/GraphicsLayer",
-  "esri/layers/ArcGISDynamicMapServiceLayer",
-  "esri/InfoTemplate",
-  "esri/layers/FeatureLayer",
-  "esri/SpatialReference",
-  "esri/geometry/Polyline",
-  "esri/symbols/LineSymbol",
-  "esri/geometry/Multipoint",
-  "esri/symbols/SimpleMarkerSymbol",
-  "esri/symbols/SimpleLineSymbol",
+  'esri/graphic',
+  'esri/geometry/Point',
+  'esri/Color',
+  'esri/layers/GraphicsLayer',
+  'esri/layers/ArcGISDynamicMapServiceLayer',
+  'esri/InfoTemplate',
+  'esri/layers/FeatureLayer',
+  'esri/SpatialReference',
+  'esri/geometry/Polyline',
+  'esri/symbols/LineSymbol',
+  'esri/geometry/Multipoint',
+  'esri/symbols/SimpleMarkerSymbol',
+  'esri/symbols/SimpleLineSymbol',
   'dojo/domReady!'], function(Map,
   Graphic,
   Point,
@@ -43,7 +43,7 @@ map.addLayer(graphicLine);
 var multP = new Multipoint();
 multP.setSpatialReference(map.spatialReference);
 /* each click make a point*/
-map.on("click",function(point){
+map.on('click',function(point){
   /*the first line delet de line*/
   graphicLine.clear();
   var Puntox = point.mapPoint.x;
@@ -61,7 +61,7 @@ map.on("click",function(point){
 
 var Puntos =[];
 var Lin_gra
-map.on("dbl-click",function(){
+map.on('dbl-click',function(){
   map.disableDoubleClickZoom();
   var lineSymbol = new SimpleLineSymbol();
   lineSymbol.setColor(new Color([0, 169, 230, 1]));
