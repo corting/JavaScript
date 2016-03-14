@@ -9,7 +9,7 @@ require(['esri/map',
   'esri/InfoTemplate',
   'esri/layers/FeatureLayer',
   'esri/SpatialReference',
-  "esri/geometry/Polygon",
+  'esri/geometry/Polygon',
   'esri/symbols/LineSymbol',
   'esri/geometry/Multipoint',
   'esri/symbols/SimpleMarkerSymbol',
@@ -63,6 +63,7 @@ var Puntos =[];
 var Pol_gra
 map.on('dbl-click',function(){
   map.disableDoubleClickZoom();
+  /*add the last point that is teh same the first*/
   Puntos.push(Puntos[0]);
   var fill = new SimpleFillSymbol();
   fill.setColor(new Color([230, 0, 0, 0.25]));
